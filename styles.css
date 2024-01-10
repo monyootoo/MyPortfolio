@@ -1,7 +1,14 @@
 /*Custom Fonts Start*/
 
 /*Neue Haas Grotesk Display Pro*/
+
 @font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: normal;
+
   font-family: "Neue Haas Grotesk Display Pro";
   src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf")
     format("truetype");
@@ -18,6 +25,14 @@
 }
 
 /*italics*/
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLightItalic.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
 @font-face {
   font-family: "Neue Haas Grotesk Display Pro";
   src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRomanItalic.ttf")
@@ -325,33 +340,24 @@ header {
   flex-direction: column;
   gap: 0%;
   margin-left: -25px;
-  margin-bottom: -2.5%;
+  margin-bottom: -2.5vw;
   padding: 40px;
-  border: #ffffff 2px solid;
-  max-width: 500px;
+  max-width: 600px;
+  border:solid #ffffff 2px;
   background: #090809;
+    color: #ffffff;
   align-self: center;
 }
 
 .design-process-link {
   grid-area: design-process;
-  background: no-repeat
-      linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #d9bd1b 78%),
-    #e4ca34;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
   font-style: italic;
   letter-spacing: -0.25px;
-  color: #000000;
-  max-width: 500px;
-  padding: 10px;
-  margin-top: -10%;
-  margin-left: -25px;
   justify-content: center;
-  align-self: flex-start;
-  align-items: center;
   text-align: center;
-  z-index: 2;
+  color:#E4CA34;
 }
 
 /*end of projects*/
@@ -368,6 +374,7 @@ header {
   grid-template-columns: 40% 60%;
   border:solid #ffffff 2px;
   padding:50px 0px;
+  margin-bottom: 4.5%;
 }
 
 .resume-section-title{
@@ -416,7 +423,7 @@ header {
 }
 
 .resume-pfp{
-  max-width:285px;
+  max-width:10px;
 }
 
 .name-address h1, .name-address h2, .name-address a{
@@ -430,6 +437,7 @@ header {
 
 .name-address a{
   font-size:1.25rem;
+  font-weight:300;
 }
 
 .resume-email{
@@ -462,7 +470,7 @@ border-radius: 250px;
 
 .schools h1 {
   font-size: 1.25rem;
-  color: #7241d9;
+  color: #D3D829;
 }
 .schools h2,
 h3 {
@@ -532,6 +540,88 @@ height: 50px;
 }
 
 /*end of resume*/
+
+
+
+
+
+
+
+
+
+/*footer*/
+footer{
+  display: flex;
+  height:10vw;
+}
+
+#contact{
+  background:#7241D9;
+  color:white;
+  margin-left:4vw;
+  margin-right:4vw;
+  margin-bottom:0vw;
+  align-self:flex-end;
+  height: fit-content;
+}
+
+#contact h1{
+  background:#090809;
+  font-style:italic;
+  font-weight:300;
+  letter-spacing:-0.08vw;
+  border:white 2px solid;
+  width:15vw;
+  height:fit-content;
+  text-align: center;
+  align-items:center;
+  margin-top:-1.5vw;
+  margin-left:-2vw;
+}
+
+#contact p{
+  font-size:1.5rem;
+  font-family: "Redaction 50";
+}
+
+.contact-info{
+  width:100%;
+  display:flex;
+  flex-flow:row;
+  text-align:center;
+  justify-items:center;
+  align-items:center;
+  gap:20px;
+  padding:10px;
+}
+
+#contact a{
+  color:white;
+}
+
+.social-icons{
+  display: inline-flex;
+  gap: 1vw;
+  justify-content:center;
+  align-content:center;
+}
+
+.contact-icon{
+  width:36px;
+  height:36px;
+}
+/*end of footer*/
+
+
+
+
+
+
+
+
+
+
+
 
 /*non-specific*/
 .section-title {

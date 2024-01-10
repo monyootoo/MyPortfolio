@@ -1,0 +1,579 @@
+/*Custom Fonts Start*/
+
+/*Neue Haas Grotesk Display Pro*/
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*italics*/
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRomanItalic.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediumItalic.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/*Redaction 100*/
+@font-face {
+  font-family: "Redaction 100";
+  src: url("fonts/redaction-cufonfonts/Redaction100-vmXR9.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*redaction100 italics*/
+@font-face {
+  font-family: "Redaction 100";
+  src: url("fonts/redaction-cufonfonts/Redaction100Italic-rgDrK.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/*Redaction 70*/
+@font-face {
+  font-family: "Redaction 70";
+  src: url("fonts/redaction-cufonfonts/Redaction70-RpXqE.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Redaction 50*/
+@font-face {
+  font-family: "Redaction 50";
+  src: url("fonts/redaction-cufonfonts/Redaction50-8Mg4n.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*redaction50 italics*/
+@font-face {
+  font-family: "Redaction 50";
+  src: url("fonts/redaction-cufonfonts/Redaction50Italic-2ODWo.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/*Custom Fonts End*/
+
+/*navbar*/
+.nav {
+  /*display*/
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  /*position*/
+  top: 0%;
+  position: fixed;
+  gap: 50px;
+  z-index: 1000;
+  /*makes it appear on top*/
+
+  /*background*/
+  background: #090809;
+  width: 100%;
+  height: 10%;
+  overflow: visible;
+
+  /*font*/
+  font-size: 2vw;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -1px;
+  vertical-align: middle;
+}
+
+.nav a {
+  color: #ffffff;
+}
+
+.logo {
+  color: #ffffff;
+  text-align: left;
+  position: absolute;
+  left: 5%;
+}
+
+.links * {
+  box-sizing: border-box;
+}
+
+.links {
+  position: absolute;
+  text-align: right;
+  right: 5%;
+}
+
+.links {
+  color: #ffffff;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+/*end of nav*/
+
+/*header*/
+.bg-smoke {
+  position: absolute;
+  z-index: 0;
+  float: left;
+  align-self: flex-end;
+  min-height: 90vh;
+  width: auto;
+}
+
+#about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr 2fr);
+  grid-template-rows: auto;
+  grid-template-areas: "pfp green-box green-box";
+  row-gap: 0%;
+  margin-top: 5vh;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background: no-repeat
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, #090809 100%),
+    url("assets/header-assets/purple-bg-vector.svg");
+  background-size: cover;
+}
+
+.illustration-2 {
+  grid-area: pfp;
+  align-self: flex-end;
+  width: 25rem;
+  height: 25rem;
+  box-shadow: -10px 0px 0px 0px rgba(211, 216, 41, 1);
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.green-box,
+.green-box * {
+  box-sizing: border-box;
+}
+
+.green-box {
+  align-self: flex-end;
+  position: relative;
+  grid-area: green-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr 2f);
+  grid-template-rows: 20% 20% 60%;
+  grid-template-columns: 30% 70%;
+  grid-template-areas:
+    ". c"
+    "a b"
+    "a b";
+
+  background: linear-gradient(
+    180deg,
+    rgba(211, 216, 41, 1) 9.49999988079071%,
+    rgba(211, 216, 41, 1) 62.5%,
+    rgba(167, 171, 0, 1) 99.50000047683716%
+  );
+  width: 50rem;
+  height: 29rem;
+  margin: 0%;
+  margin-bottom: -1.5%;
+  color: #010001;
+  z-index: 1;
+}
+
+.about-me-section-title {
+  grid-area: c;
+  justify-self: flex-end;
+  padding-right: 10%;
+  font-size: 2rem;
+  color: #090809;
+}
+
+.hello {
+  color: #010001;
+  font-size: 8rem;
+  font-weight: 400;
+  font-style: italic;
+  grid-area: a;
+  align-self: center;
+  justify-content: center;
+  transform: rotate(-90deg) scale(1, 1);
+}
+
+.im-moyartu {
+  font-size: 3.5rem;
+  font-weight: 500;
+  padding-bottom: 4.5%;
+  margin: 0%;
+}
+
+.header-desc {
+  display: flex;
+  flex-direction: column;
+  grid-area: b;
+  position: relative;
+  /*alignment*/
+
+  width: 95%;
+  height: inherit;
+  padding-right: 10%;
+}
+
+.header-desc p {
+  font-size: 1.25rem;
+  padding-bottom: 4.5%;
+  margin: 0;
+}
+
+.bg-transition {
+  position: absolute;
+  z-index: 1;
+  align-self: flex-end;
+  justify-self: flex-start;
+  margin: 0%;
+  left: -0.25vw;
+  width: 100%;
+}
+
+header {
+  padding-left: 0.5vw;
+  margin-bottom: 5%;
+}
+/*end of header*/
+
+/*projects*/
+
+#projects {
+  margin-left: 2vw;
+  margin-right: 4vw;
+  display: grid;
+  grid-template-areas:
+    "title ."
+    "pic desc"
+    ". design-process";
+  grid-template-columns: 70% 30%;
+  gap: 0%;
+  overflow: visible;
+  margin-bottom: 4.5%;
+}
+
+.project-section-title {
+  grid-area: title;
+  margin: 0;
+  padding-bottom: 0;
+  align-self: flex-end;
+}
+
+.project-img,
+.project-img * {
+  box-sizing: border-box;
+}
+
+.project-img {
+  position: relative;
+  overflow: visible;
+  max-width: 100%;
+  justify-content: flex-end;
+  grid-area: pic;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  padding: 0%;
+  margin: 0;
+  justify-self: stretch;
+}
+
+.project-1-description {
+  position: relative;
+  justify-self: start;
+  grid-area: desc;
+  display: flex;
+  flex-direction: column;
+  gap: 0%;
+  margin-left: -25px;
+  margin-bottom: -2.5%;
+  padding: 40px;
+  border: #ffffff 2px solid;
+  max-width: 500px;
+  background: #090809;
+  align-self: center;
+}
+
+.design-process-link {
+  grid-area: design-process;
+  background: no-repeat
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #d9bd1b 78%),
+    #e4ca34;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.25px;
+  color: #000000;
+  max-width: 500px;
+  padding: 10px;
+  margin-top: -10%;
+  margin-left: -25px;
+  justify-content: center;
+  align-self: flex-start;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+/*end of projects*/
+
+/*resume*/
+#resume {
+  margin-left: 2vw;
+  margin-right: 4vw;
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "pfp education"
+    "pfp skills";
+  grid-template-columns: 40% 60%;
+  border:solid #ffffff 2px;
+  padding:50px 0px;
+}
+
+.resume-section-title{
+  grid-area:title;
+  position:relative;
+  background:#090809;
+  width:150px;
+  text-align:center;
+  z-index: 5;
+  margin-top:-12vh;
+  margin-left:36vw;
+}
+
+#title-w-icon {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap:10px;
+  max-height:50px;
+  margin-bottom:0px;
+}
+
+.ed-skill-icon{
+  width:2rem;
+  align-content:center;
+}
+
+.resume-subtitle {
+  display: inline;
+  align-content: center;
+  /*resume & education titles*/
+  font-size: 2rem;
+}
+
+/*name, address, pfp*/
+.name-address {
+  grid-area: pfp;
+  display:flex;
+  flex-direction:column;
+  justify-self:center;
+  align-items:center;
+  text-align:center;
+  gap:20px;
+  max-width:230px;
+  
+}
+
+.resume-pfp{
+  max-width:285px;
+}
+
+.name-address h1, .name-address h2, .name-address a{
+  margin:0px;
+}
+
+.name-address h2{
+  font-weight: 400;
+  font-size:1.25rem;
+}
+
+.name-address a{
+  font-size:1.25rem;
+}
+
+.resume-email{
+  color:#ffffff;
+}
+
+.pdf-version-button{
+  display:flex;
+  box-sizing: border-box;
+padding: 10px 20px;
+margin:20px;
+background-color:#ffffff;
+color: #090809;
+justify-self:flex-end;
+align-self:center;
+text-align:center;
+font-size:1.5rem;
+font-family: "Redaction 50";
+font-style: italic;
+border-radius: 250px;
+}
+
+/*education*/
+.schools {
+  padding: 0%;
+  margin: 0%;
+  display: inline-flex;
+  column-gap: 50px;
+}
+
+.schools h1 {
+  font-size: 1.25rem;
+  color: #7241d9;
+}
+.schools h2,
+h3 {
+  font-size: 1rem;
+}
+
+.schools h3 {
+  font-weight: 400;
+}
+
+.education {
+  grid-area: education;
+  display: flex;
+  flex-direction: column;
+}
+
+/*skills*/
+
+.skills {
+  grid-area: skills;
+  font-size: 1.25rem;
+  padding-top:25px;
+}
+
+.skill-name {
+  font-weight: 600;
+}
+
+.level {
+  font-family: "Redaction 50";
+}
+
+.name-lvl { /*skill name and level, ex: prog lang & exp*/
+  display: inline-flex;
+  column-gap: 10px;
+height: 50px;
+ 
+}
+
+.specific-skill { /*individual skill, aka title and hearts*/
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  gap: 1px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.skill-list { /*all skills*/
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  width: 100%;
+  height:50%;
+  position: relative;
+  padding-bottom:20px;
+}
+
+.heart-skill-lvl {
+  display: inline-block;
+}
+
+/*end of resume*/
+
+/*non-specific*/
+.section-title {
+  font-size: 2rem;
+}
+body {
+  margin: 0px;
+  background-color: #090809;
+  color: #ffffff;
+  font-family: Neue Haas Grotesk Display Pro;
+  font-size: 90%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*fonts*/
+.Redaction100-Italic {
+  font-family: "Redaction 100";
+  font-style: italic;
+  font-weight: 400;
+  margin: 0;
+  padding: 0%;
+}
+
+.Redaction50-Italic {
+  font-family: "Redaction 50";
+  font-style: italic;
+  font-weight: 400;
+  margin: 0;
+  padding: 0%;
+}
+
+.Redaction50 {
+  font-family: "Redaction 50";
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  padding: 0%;
+}
+
+.italics {
+  font-style: italic;
+}

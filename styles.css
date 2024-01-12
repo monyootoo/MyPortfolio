@@ -1,7 +1,6 @@
 /* Custom Fonts Start */
 
 /* Neue Haas Grotesk Display Pro */
-
 @font-face {
   font-family: "Neue Haas Display Light";
   src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf") format("truetype");
@@ -23,7 +22,6 @@
 }
 
 /* Italics */
-
 @font-face {
   font-family: "Neue Haas Display Light";
   src: url("fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLightItalic.ttf") format("truetype");
@@ -45,7 +43,6 @@
 }
 
 /* Redaction 100 */
-
 @font-face {
   font-family: "Redaction 100";
   src: url("fonts/redaction-cufonfonts/Redaction100-vmXR9.otf") format("opentype");
@@ -54,7 +51,6 @@
 }
 
 /* Redaction 100 Italics */
-
 @font-face {
   font-family: "Redaction 100";
   src: url("fonts/redaction-cufonfonts/Redaction100Italic-rgDrK.otf") format("opentype");
@@ -63,7 +59,6 @@
 }
 
 /* Redaction 70 */
-
 @font-face {
   font-family: "Redaction 70";
   src: url("fonts/redaction-cufonfonts/Redaction70-RpXqE.otf") format("opentype");
@@ -72,7 +67,6 @@
 }
 
 /* Redaction 50 */
-
 @font-face {
   font-family: "Redaction 50";
   src: url("fonts/redaction-cufonfonts/Redaction50-8Mg4n.otf") format("opentype");
@@ -81,7 +75,6 @@
 }
 
 /* Redaction 50 Italics */
-
 @font-face {
   font-family: "Redaction 50";
   src: url("fonts/redaction-cufonfonts/Redaction50Italic-2ODWo.otf") format("opentype");
@@ -152,7 +145,6 @@
   justify-content: flex-end;
   flex-shrink: 0;
 }
-
 /*end of nav*/
 
 /*header*/
@@ -180,6 +172,7 @@
       linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, #090809 100%),
     url("assets/header-assets/purple-bg-vector.svg");
   background-size: cover;
+  margin-bottom: 50px;
 }
 
 .illustration-2 {
@@ -281,12 +274,10 @@
 
 header {
   padding-left: 0.5vw;
-  margin-bottom: 5%;
 }
 /*end of header*/
 
 /*projects*/
-
 #projects {
   display: grid;
   grid-template-areas:
@@ -296,7 +287,7 @@ header {
   grid-template-columns: 70% 30%;
   gap: 0%;
   overflow: visible;
-  margin-bottom: 4.5%;
+  margin-bottom: 50px;
   max-width:1200px;
 }
 
@@ -315,7 +306,7 @@ header {
 .project-img {
   position: relative;
   overflow: visible;
-  max-width: 90vw;
+  max-width: 70vw;
   justify-content: flex-end;
   grid-area: pic;
 }
@@ -333,7 +324,7 @@ header {
   display: flex;
   flex-direction: column;
   margin-left: -25px;
-  margin-bottom: -10px;
+  margin-bottom: -15px;
   padding: 40px;
   border:solid #ffffff 2px;
   background: #090809;
@@ -351,7 +342,6 @@ header {
   text-align: center;
   color:#E4CA34;
 }
-
 /*end of projects*/
 
 /*resume*/
@@ -365,7 +355,7 @@ header {
   grid-template-columns: 40% 60%;
   border:solid #ffffff 2px;
   padding:30px 0px;
-  margin-bottom: 4.5%;
+  margin-bottom: 50px;
   justify-content:center;
 }
 
@@ -479,7 +469,6 @@ h3 {
 }
 
 /*skills*/
-
 .skills {
   grid-area: skills;
   font-size: 1.25rem;
@@ -607,8 +596,7 @@ body {
 }
 
 main{
-  margin-left: 3vw;
-  margin-right: 3vw;
+  margin: 0vw 4vw;
   display:flex;
   flex-direction:column;
   justify-self:center;
@@ -616,6 +604,13 @@ main{
 
 a {
   text-decoration: none;
+}
+
+/*hover & animations*/
+.nav a:hover{
+  transition-duration: 700ms;
+  color:#D3D829;
+  
 }
 
 /*fonts*/
@@ -645,4 +640,9 @@ a {
 
 .italics {
   font-style: italic;
+}
+/*end of fonts*/
+
+.links a.active{
+  color: #d3d829 !important;
 }

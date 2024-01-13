@@ -340,7 +340,7 @@ header {
   letter-spacing: -0.25px;
   justify-content: center;
   text-align: center;
-  color:#E4CA34;
+  color:white;
 }
 /*end of projects*/
 
@@ -606,11 +606,24 @@ a {
   text-decoration: none;
 }
 
-/*hover & animations*/
+/*click, hover & animations*/
 .nav a:hover{
-  transition-duration: 700ms;
+  transition-duration: 350ms;
   color:#D3D829;
   
+}
+.pdf-version-button:hover{
+  transition-duration: 350ms;
+  background-color:#D3D829;
+}
+#contact a:hover{
+  color:#D3D829;
+  text-decoration:underline;
+}
+.design-process-link:hover {
+  transition-duration: 350ms;
+ text-decoration:underline;
+  color:#E4CA34;
 }
 
 /*fonts*/

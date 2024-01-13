@@ -1,0 +1,22 @@
+{
+    "connector": {
+        "name": "htmlhint"
+    },
+    "formatters": [
+        "json"
+    ],
+    "hints": {
+        "no-inline-styles": "off",
+        "html-checker/alt-require": "error",
+        "html-checker/doctype": "error",
+        "html-checker/img-alt": "error",
+        "htmlhint/no-nested-interactive": "warn",
+        "content-type": [
+            "error",
+            {
+                ".*\\.js": "application/javascript; charset=utf-8"
+            }
+        ]
+        //other hints
+    }
+}

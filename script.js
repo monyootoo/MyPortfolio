@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  //intersection observer
   const options = {
     root: document.documentElement,//document.querySelector('.nav'), // The viewport element
     threshold: 0.55, // Intersection trigger at 25% visibility

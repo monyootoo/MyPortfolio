@@ -280,15 +280,15 @@ header {
 /*projects*/
 #projects {
   display: grid;
+  width:100%;
   grid-template-areas:
-    "title ."
-    "pic desc"
-    ". design-process";
-  grid-template-columns: 70% 30%;
+    "title . "
+    "pic desc";
+  grid-template-columns: 70% 15% 15%;
   gap: 0%;
-  overflow: visible;
   margin-bottom: 50px;
-  max-width:1200px;
+  min-height: 90vh;
+  margin:0vw, 4vw;
 }
 
 .project-section-title {
@@ -298,17 +298,14 @@ header {
   align-self: flex-end;
 }
 
-.project-img,
-.project-img * {
-  box-sizing: border-box;
-}
-
 .project-img {
-  position: relative;
-  overflow: visible;
-  max-width: 70vw;
-  justify-content: flex-end;
+  display:flex;
+  box-sizing: border-box;
   grid-area: pic;
+  position: relative;
+  justify-self: flex-start;
+  height:28rem;
+  
 }
 
 .project-title {
@@ -330,10 +327,10 @@ header {
   background: #090809;
     color: #ffffff;
   align-self: flex-end;
+  min-width:290px;
 }
 
 .design-process-link {
-  grid-area: design-process;
   font-size: 1.25rem;
   font-weight: 400;
   font-style: italic;
@@ -346,7 +343,7 @@ header {
 
 /*resume*/
 #resume {
-  max-width:1200px;
+  max-width:100%;
   display: grid;
   grid-template-areas:
     "title title"
@@ -366,8 +363,8 @@ header {
   width:150px;
   text-align:center;
   z-index: 5;
-  margin-top:-8vh;
-  margin-left:36vw;
+  margin-top:-50px;
+  margin-left:450px;
 }
 
 #title-w-icon {
@@ -391,6 +388,7 @@ header {
 }
 
 /*name, address, pfp*/
+
 .name-address {
   grid-area: pfp;
   display:flex;
@@ -398,13 +396,11 @@ header {
   justify-self:center;
   align-self:center;
   text-align:center;
-  gap:20px;
-  max-width:230px;
-  padding-bottom:0px;
+  gap:13px;
 }
 
 .pfp{
-  max-width:250px;
+  max-width:275px;
 }
 
 .name-address h1, .name-address h2, .name-address a{
@@ -412,8 +408,9 @@ header {
 }
 
 .name-address h2{
-  font-family:"Neue Haas Display Light";
-  font-style:normal;
+  font-family:"Redaction 50";
+  font-style:italic;
+  font-weight:400;
   font-size:1rem;
 }
 
@@ -422,23 +419,29 @@ header {
 }
 
 .resume-email{
+  font-family:"Redaction 50";
+  font-style:italic;
+  font-weight:400;
+  font-size:1rem;
   color:#ffffff;
 }
 
 .pdf-version-button{
   display:flex;
+  width:205px;
   box-sizing: border-box;
   padding: 15px 25px;
   margin:20px;
   background-color:#ffffff;
   color: #090809;
-  justify-self:flex-end;
+  justify-content:center;
   align-self:center;
   text-align:center;
   font-size:1.5rem;
   font-family: "Redaction 50";
   font-style: italic;
   border-radius: 250px;
+  
 }
 
 /*education*/
@@ -524,6 +527,7 @@ height: 50px;
 /*footer*/
 footer{
   display: flex;
+
   height:10vw;
   max-width:1200px;
 }
@@ -532,6 +536,7 @@ footer{
   background:#7241D9;
   color:white;
   margin-bottom:0vw;
+  margin:0vw 4vw;
   height: fit-content;
 }
 
@@ -596,7 +601,7 @@ body {
 }
 
 main{
-  margin: 0vw 4vw;
+  margin: 4vw 4vw;
   display:flex;
   flex-direction:column;
   justify-self:center;

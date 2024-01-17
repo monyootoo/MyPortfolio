@@ -108,7 +108,7 @@
   font-size: 2vw;
   font-weight: 600;
   font-style: italic;
-  letter-spacing: -1px;
+  letter-spacing: -0.05vw;
   vertical-align: middle;
 
 }
@@ -156,34 +156,31 @@
   min-height: 90vh;
   width: auto;
 }
+#about, #about * {
+box-sizing: border-box;
+}
 
 #about {
   display: grid;
-  grid-template-columns: repeat(3, 1fr 2fr);
+  grid-template-columns: 35% 65%;
   grid-template-rows: auto;
   grid-template-areas: "pfp green-box green-box";
   row-gap: 0%;
-  margin-top: 5vh;
   box-sizing: border-box;
   position: relative;
-  width: 100%;
-  min-height: 90vh;
-  background: no-repeat
-      linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, #090809 100%),
-    url("assets/header-assets/purple-bg-vector.svg");
+  min-width: 100%;
+  min-height: fit-content;
+  background:url("assets/header-assets/pixel-background-image.png"), no-repeat, linear-gradient(180deg, rgba(114, 65, 217, 0.00) 37.46%, #090809 88.43%), #6C36DE;
   background-size: cover;
-  margin-bottom: 50px;
-}
+  padding: 3vw 4vw 4vw 0vw;
+  margin-top: 10vh;
+  }
 
-.illustration-2 {
+.header-pfp{
   grid-area: pfp;
   align-self: flex-end;
-  width: 25rem;
-  height: 25rem;
-  box-shadow: -10px 0px 0px 0px rgba(211, 216, 41, 1);
-  margin: 0;
+  width: 100%;
   padding: 0;
-  z-index: 1;
 }
 
 .green-box,
@@ -193,15 +190,16 @@
 
 .green-box {
   align-self: flex-end;
+  align-items: center;
   position: relative;
   grid-area: green-box;
   display: grid;
-  grid-template-columns: repeat(2, 1fr 2f);
-  grid-template-rows: 20% 20% 60%;
+
+  grid-template-rows: repeat(2, 1fr 2f);
   grid-template-columns: 30% 70%;
   grid-template-areas:
-    ". c"
-    "a b"
+  "a c"  
+  "a b"
     "a b";
 
   background: linear-gradient(
@@ -210,20 +208,26 @@
     rgba(211, 216, 41, 1) 62.5%,
     rgba(167, 171, 0, 1) 99.50000047683716%
   );
-  width: 50rem;
-  height: 29rem;
+  min-width: 100%;
+  max-height: fit-content;
   margin: 0%;
-  margin-bottom: -1.5%;
+  margin-bottom: -2.5%;
+  padding:5%;
   color: #010001;
   z-index: 1;
 }
 
 .about-me-section-title {
   grid-area: c;
+  position: relative;
   justify-self: flex-end;
-  padding-right: 10%;
-  font-size: 2rem;
+  align-self:flex-start;
+  padding:0px;
+  margin-top:-2.5%;
+  
   color: #090809;
+  padding: 0px 20px;
+  height:fit-content;
 }
 
 .hello {
@@ -233,15 +237,8 @@
   font-style: italic;
   grid-area: a;
   align-self: center;
-  justify-content: center;
+  justify-self: center;
   transform: rotate(-90deg) scale(1, 1);
-}
-
-.im-moyartu {
-  font-size: 3.5rem;
-  font-weight: 500;
-  padding-bottom: 4.5%;
-  margin: 0%;
 }
 
 .header-desc {
@@ -254,12 +251,18 @@
   width: 95%;
   height: inherit;
   padding-right: 10%;
+  align-self:center;
+  justify-self:center;
+}
+
+.im-moyartu {
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin: 0%;
 }
 
 .header-desc p {
   font-size: 1.25rem;
-  padding-bottom: 4.5%;
-  margin: 0;
 }
 
 .bg-transition {
@@ -272,43 +275,35 @@
   width: 100%;
 }
 
-header {
-  padding-left: 0.5vw;
-}
 /*end of header*/
 
 /*projects*/
 #projects {
   display: grid;
+  width:100%;
   grid-template-areas:
-    "title ."
-    "pic desc"
-    ". design-process";
+    "pic desc";
   grid-template-columns: 70% 30%;
-  gap: 0%;
-  overflow: visible;
-  margin-bottom: 50px;
-  max-width:1200px;
+  min-height: fit-content;
+  margin-bottom:10%;
 }
 
 .project-section-title {
-  grid-area: title;
-  margin: 0;
-  padding-bottom: 0;
-  align-self: flex-end;
-}
-
-.project-img,
-.project-img * {
-  box-sizing: border-box;
+  grid-area: pic;
+  margin-top:-2.5rem;
+  align-self: flex-start;
+  z-indez:200;
 }
 
 .project-img {
-  position: relative;
-  overflow: visible;
-  max-width: 70vw;
-  justify-content: flex-end;
+  display:flex;
+  box-sizing: border-box;
   grid-area: pic;
+  position: relative;
+  justify-self: flex-start;
+  align-self: flex-start;
+  max-width:100%;
+  
 }
 
 .project-title {
@@ -323,17 +318,22 @@ header {
   grid-area: desc;
   display: flex;
   flex-direction: column;
-  margin-left: -25px;
-  margin-bottom: -15px;
-  padding: 40px;
+ 
+  padding: 30px;
   border:solid #ffffff 2px;
   background: #090809;
     color: #ffffff;
   align-self: flex-end;
+  align-content: center;
+  justify-self: flex-end;
+  width:85%;
+  min-height:fit-content;
+
+  margin-left: -5%;
+  margin-bottom: -5%;
 }
 
 .design-process-link {
-  grid-area: design-process;
   font-size: 1.25rem;
   font-weight: 400;
   font-style: italic;
@@ -346,35 +346,35 @@ header {
 
 /*resume*/
 #resume {
-  max-width:1200px;
+  max-width:100%;
   display: grid;
   grid-template-areas:
-    "title title"
     "pfp education"
     "pfp skills";
   grid-template-columns: 40% 60%;
   border:solid #ffffff 2px;
-  padding:30px 0px;
-  margin-bottom: 50px;
   justify-content:center;
+  padding:0px;
 }
 
 .resume-section-title{
-  grid-area:title;
+  grid-area:education;
   position:relative;
-  background:#090809;
   width:150px;
   text-align:center;
   z-index: 5;
-  margin-top:-8vh;
-  margin-left:36vw;
+  justify-self:flex-end;
+  padding:0;
+  margin:0;
+  margin-top:-2.5rem;
+  margin-right:-13px;
 }
 
 #title-w-icon {
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-  gap:10px;
+  column-gap:10px;
   max-height:50px;
   margin-bottom:0px;
 }
@@ -391,20 +391,24 @@ header {
 }
 
 /*name, address, pfp*/
+
 .name-address {
   grid-area: pfp;
   display:flex;
   flex-direction:column;
-  justify-self:center;
-  align-self:center;
-  text-align:center;
-  gap:20px;
-  max-width:230px;
-  padding-bottom:0px;
+  background: linear-gradient(180deg, rgba(58, 63, 85, 1.00) 18.000000715255737%,rgba(27, 11, 49, 0.15) 87.00000047683716%);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  padding:25px 0px;
 }
 
 .pfp{
   max-width:250px;
+  justify-self:center;
 }
 
 .name-address h1, .name-address h2, .name-address a{
@@ -413,7 +417,7 @@ header {
 
 .name-address h2{
   font-family:"Neue Haas Display Light";
-  font-style:normal;
+  font-weight:300;
   font-size:1rem;
 }
 
@@ -422,23 +426,35 @@ header {
 }
 
 .resume-email{
+  font-family:"Neue Haas Display Light";
+  font-weight:300;
+  font-size:1rem;
   color:#ffffff;
 }
 
 .pdf-version-button{
   display:flex;
+  width:205px;
   box-sizing: border-box;
   padding: 15px 25px;
   margin:20px;
   background-color:#ffffff;
   color: #090809;
-  justify-self:flex-end;
+  justify-content:center;
   align-self:center;
   text-align:center;
   font-size:1.5rem;
   font-family: "Redaction 50";
   font-style: italic;
   border-radius: 250px;
+  
+}
+
+.ed-skills{
+  padding:0 50px;
+}
+.ed-skills hr{
+  border:none;
 }
 
 /*education*/
@@ -471,8 +487,7 @@ h3 {
 /*skills*/
 .skills {
   grid-area: skills;
-  font-size: 1.25rem;
-  padding-top:25px;
+  font-size: 1rem;
 }
 
 .skill-name {
@@ -485,8 +500,9 @@ h3 {
 
 .name-lvl { /*skill name and level, ex: prog lang & exp*/
   display: inline-flex;
-  column-gap: 10px;
-height: 50px;
+  column-gap: 5px;
+  height:35px;
+  align-items:center;
  
 }
 
@@ -494,7 +510,7 @@ height: 50px;
   display: flex;
   flex-direction: column;
   justify-items: flex-start;
-  gap: 1px;
+  row-gap: 1px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -518,68 +534,56 @@ height: 50px;
 .heart-skill-lvl {
   display: inline-block;
 }
+
+.full, .empty{
+  width:40px;
+  height:35px;
+  padding:0;
+  margin:0;
+}
 /*end of resume*/
 
 
 /*footer*/
 footer{
-  display: flex;
-  height:10vw;
-  max-width:1200px;
-}
-
-#contact{
-  background:#7241D9;
-  color:white;
-  margin-bottom:0vw;
-  height: fit-content;
-}
-
-#contact h1{
-  background:#090809;
-  font-style:italic;
-  font-weight:300;
-  letter-spacing:-0.08vw;
-  border:white 2px solid;
-  width:15vw;
+  position: relative;
+  background:url("assets/footer-assets/pixel-bg.png"), no-repeat, linear-gradient(180deg, rgba(9, 8, 9, 0.20) 0%,rgba(0, 0, 0, 0.00) 75.16665458679199%,rgba(0, 0, 0, 0.00) 100%), linear-gradient(to left, #6030c4, #6030c4);
+  background-size: cover;
+  min-width:100%;
   height:fit-content;
-  text-align: center;
-  align-items:center;
-  margin-top:-1.5vw;
-  margin-left:-2vw;
+  align-content:center;
 }
-
-#contact p{
-  font-size:1.5rem;
-  font-family: "Redaction 50";
+#contact{
+display:grid;
+grid-template-columns: 70% 30%;
+grid-template-areas: "contact copyright";
+font-family:"Redaction 50";
+font-size: 1.25rem;
 }
-
 .contact-info{
-  width:100%;
-  display:flex;
-  flex-flow:row;
-  text-align:center;
-  justify-items:center;
-  align-items:center;
-  gap:20px;
-  padding:10px;
+  grid-area:contact;
+  align-self:flex-start;
+  justify-self:flex-start;
+  padding: 0px 4vw;
+  padding-bottom: 15px;
 }
 
+.copyright{
+  grid-area:copyright;
+  align-self:flex-end;
+  justify-self:flex-end;
+  padding: 0 4vw;
+}
 #contact a{
   color:white;
 }
 
-.social-icons{
-  display: inline-flex;
-  gap: 1vw;
-  justify-content:center;
-  align-content:center;
+.socials{
+  display:flex;
+  flex-direction:row;
+  gap: 15px;
 }
 
-.contact-icon{
-  width:36px;
-  height:36px;
-}
 /*end of footer*/
 
 /*non-specific*/
@@ -591,19 +595,26 @@ body {
   color: #ffffff;
   font-family: Neue Haas Grotesk Display Pro, Arial, sans-serif;
   font-size: 90%;
-  justify-items:center;
   margin:0;
 }
 
 main{
-  margin: 0vw 4vw;
+  margin: 8.5% 4vw 4% 4vw;
   display:flex;
   flex-direction:column;
+  gap:8.5%;
   justify-self:center;
+}
+main *{
+ align-content:center;
 }
 
 a {
   text-decoration: none;
+}
+
+p{
+  line-height: 1.25;
 }
 
 /*click, hover & animations*/
@@ -616,14 +627,15 @@ a {
   transition-duration: 350ms;
   background-color:#D3D829;
 }
+
 #contact a:hover{
   color:#D3D829;
   text-decoration:underline;
 }
-.design-process-link:hover {
+.design-process-link:hover, .resume-email:hover {
   transition-duration: 350ms;
  text-decoration:underline;
-  color:#E4CA34;
+  color:#D3D829;
 }
 
 /*fonts*/

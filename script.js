@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // get the target element's offsetTop and subtract a desired offset
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-        const offset = 70;
+        const offset = 125;
         const targetOffsetTop = targetElement.offsetTop - offset;
 
         // scroll to the target element with the offset
